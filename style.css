@@ -1,0 +1,12 @@
+canvas {
+    display:none;
+}
+
+#png-container {
+    display: none;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+}
