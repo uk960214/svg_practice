@@ -2,7 +2,7 @@ import React from 'react';
 import './FrontPage.css'
 
 
-const FrontPage = () => {
+const FrontPage = ({ onRouteChange }) => {
     return (
         <div>
             <h1 className='f1 lh-title near-white'>
@@ -17,21 +17,21 @@ const FrontPage = () => {
                 </g>
                 <filter id="shadow1">
                     <feDropShadow dx="0" dy="0" stdDeviation="15"
-                        flood-color="#b6f4f4"/>
+                        floodColor="#b6f4f4"/>
                 </filter>
                 <filter id="shadow2">
                     <feDropShadow dx="0" dy="0" stdDeviation="15"
-                        flood-color="#d2f3f2"/>
+                        floodColor="#d2f3f2"/>
                 </filter>
                 <filter id="shadow3">
                     <feDropShadow dx="0" dy="0" stdDeviation="20"
-                        flood-color="#ffffff"/>
+                        floodColor="#ffffff"/>
                 </filter>
             </svg>
             <br/>
             <button 
                 className='nextButton link ba b--silver br-pill bg-near-white grow dib black ph4 pv2 mh4 mv2 pointer' 
-                onClick={() => {}}
+                onClick={() => onRouteChange('name')}
             > 
                 시작하기 &gt;
             </button>
