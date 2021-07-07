@@ -1,17 +1,27 @@
 import React from 'react';
 import './Result.css';
+const saveSvgAsPng = require('save-svg-as-png')
 
 class Result extends React.Component {
+    constructor(props) {
+        super(props);
+        this.svgRef = React.createRef();
+    }
+
+    onDownloadClick = () => {
+        const node = this.svgRef.current;
+        saveSvgAsPng.default.saveSvgAsPng(node,'')
+    }
 
     render() {
         const {username, colors} = this.props
         return (
-            <div>
-                <h1 className='f1 lh-title near-white'>
-                    SNS에 공유해 함께 원기옥을 모아요!
+            <div className='content-area'>
+                <h1 className='f2 lh-title near-white'>
+                    SNS에 공유해 <br/> 함께 원기옥을 모아요!
                 </h1>
                 <section className='svgContainer'>
-                    <svg ref={this.svgRef} id='resultImage' width="540" height="540" viewBox='0 0 1080 1080' fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg ref={this.svgRef} id='resultImage' width="300" height="300" viewBox='0 0 1080 1080' fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0)">
                         <rect width="1080" height="1080" fill="#5E2CA5"/>
                         <circle r="200" transform="matrix(1 0 0 -1 540 220)" fill={colors[0]} style={{filter: 'url(#custom1)'}}/>
@@ -79,9 +89,11 @@ class Result extends React.Component {
                     </filter>
                 </svg>
                 </section>
+                <br/>
+                <br/>
                 <button 
                 className='nextButton link ba b--silver br-pill bg-near-white grow dib black ph4 pv2 mh4 mv2 pointer' 
-                onClick={() => {}}> 
+                onClick={() => this.onDownloadClick()}> 
                 다운로드
                 </button>
                 <button 
