@@ -3,11 +3,11 @@ import React from 'react';
 
 const ColorInput = ({ colors, onColorChange, onRouteChange }) => {
     return (
-        <div>
-            <h1 className='f1 lh-title near-white'>
-                나만의 원기옥 색깔 세가지를 골라봐요!
+        <div className='content-area'>
+            <h1 className='f3 lh-title near-white'>
+                원기옥 색깔 <br/>세가지를 골라주세요!
             </h1>
-            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+            <svg width="250" height="250" viewBox='0 0 500 500' xmlns="http://www.w3.org/2000/svg">
                 <title>Energy Ball</title>
                 <g>
                     <ellipse ry="220" rx="220" id="outer" cy="250" cx="250" fill={colors[0]} style={{filter: 'url(#shadow1)'}}/>

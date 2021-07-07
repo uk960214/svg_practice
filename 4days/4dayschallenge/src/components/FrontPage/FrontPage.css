@@ -1,4 +1,4 @@
-/* #outer {
+#outer {
     animation: shake1 0.5s;
     animation-iteration-count: infinite;
 }
@@ -11,7 +11,7 @@
 #inner {
     animation: shake3 0.5s;
     animation-iteration-count: infinite;
-} */
+}
 
 @keyframes shake1 {
     0% { transform: translate(0.5px, 0.5px) rotate(0deg); }

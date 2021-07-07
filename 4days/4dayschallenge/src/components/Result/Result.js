@@ -18,7 +18,7 @@ class Result extends React.Component {
         return (
             <div className='content-area'>
                 <h1 className='f2 lh-title near-white'>
-                    SNS에 공유해 <br/> 함께 원기옥을 모아요!
+                    SNS에 공유해 <br/> 함께 원기옥을 <br/> 모아요!
                 </h1>
                 <section className='svgContainer'>
                     <svg ref={this.svgRef} id='resultImage' width="300" height="300" viewBox='0 0 1080 1080' fill="none" xmlns="http://www.w3.org/2000/svg">

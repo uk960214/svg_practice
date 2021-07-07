@@ -4,11 +4,11 @@ import './FrontPage.css'
 
 const FrontPage = ({ onRouteChange }) => {
     return (
-        <div>
-            <h1 className='f1 lh-title near-white'>
-                주 4일제를 위한 원기옥 모으기!
+        <div className="content-area">
+            <h1 className='f2 lh-title near-white'>
+                주 4일제를 위한<br/> 원기옥 모으기!
             </h1>
-            <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+            <svg width="250" height="250" viewBox='0 0 500 500' xmlns="http://www.w3.org/2000/svg">
                 <title>Energy Ball</title>
                 <g>
                     <ellipse ry="220" rx="220" id="outer" cy="250" cx="250" fill="#b6f4f4" style={{filter: 'url(#shadow1)'}}/>
@@ -28,7 +28,7 @@ const FrontPage = ({ onRouteChange }) => {
                         floodColor="#ffffff"/>
                 </filter>
             </svg>
-            <br/>
+            <br/><br/>
             <button 
                 className='nextButton link ba b--silver br-pill bg-near-white grow dib black ph4 pv2 mh4 mv2 pointer' 
                 onClick={() => onRouteChange('name')}
